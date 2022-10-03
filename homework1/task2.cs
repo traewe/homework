@@ -5,22 +5,18 @@ namespace Program1
     {
         static void Main(string[] arg)
         {
-            double x1 = 0;
-            double y1 = 0;
-            double x2 = 0;
-            double y2 = 0;
-            Console.WriteLine("Enter Value for x1: ");
-            x1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter Value for y1: ");
-            y1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter Value for x2: ");
-            x2 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter Value for y2: ");
-            y2 = Convert.ToDouble(Console.ReadLine());
-            double x = Math.Pow((x1 - x2), 2);
-            double y = Math.Pow((y1 - y2), 2);
-            double length = Math.Pow((x + y), 0.5);
-            Console.WriteLine("Length = " + length);
+            double a = 0;
+            double b = 0;
+            double c = 0;
+            Console.WriteLine("Enter Value for a: ");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter Value for b: ");
+            b = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter Value for c: ");
+            c = Convert.ToDouble(Console.ReadLine());
+            double p = (a + b + c) / 2;
+            double S = Math.Pow((p * (p - a) * (p - b) * (p - c)), 0.5);
+            Console.WriteLine("Square = " + S);
         }
     }
 }
