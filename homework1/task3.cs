@@ -3,7 +3,7 @@ namespace Program1
 {
     class World
     {
-        static void Main(string[] arg)
+        static void Main(string[] args)
         {
             double x1 = 0;
             double y1 = 0;
