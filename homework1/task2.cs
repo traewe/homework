@@ -5,18 +5,22 @@ namespace Program1
     {
         static void Main(string[] args)
         {
-            double a = 0;
-            double b = 0;
-            double c = 0;
-            Console.WriteLine("Enter Value for a: ");
-            a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter Value for b: ");
-            b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter Value for c: ");
-            c = Convert.ToDouble(Console.ReadLine());
-            double p = (a + b + c) / 2;
-            double S = Math.Pow((p * (p - a) * (p - b) * (p - c)), 0.5);
-            Console.WriteLine("Square = " + S);
+            double energystart = 0;
+            double energyfinish = 0;
+            double money = 0;
+            Console.WriteLine("Enter value for energy at start: ");
+            energystart = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter value for energy at finish: ");
+            energyfinish = Convert.ToDouble(Console.ReadLine());
+            if (energyfinish - energystart <= 250)
+            {
+                money = (energyfinish - energystart) * 1.44;
+            }
+            else
+            {
+                money = 250 * 1.44 + (energyfinish - energystart - 250) * 1.68;
+            }
+            Console.WriteLine("Amount of money: " + money);
         }
     }
 }
